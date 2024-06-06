@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+
+<div class="modal-dialog" style="width: 560px;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" tabindex="-1">
+                <img src="~/Content/images/btn_close.png" alt="">
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Capture Image</h4>
+        </div>
+        <div class="padLeftRight15">
+            <div id="lblSKLCreateErrorMessage" class="alert alert-danger" style="display: none"></div>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" role="form" id="Profile-CaptureImage-form">
+                <table border="0">
+                    <tr>
+                        <td align="center">
+                            <u>Live Camera</u>
+                        </td>
+                        <td></td>
+                        <td align="center">
+                            <u>Captured Picture</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="webcam">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <img id="imgCapture" style="visibility: hidden" width="250" height="200" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="btnCapture" value="Capture" onclick="Capture();" />
+
+                        </td>
+                        <td></td>
+                        <td>
+                            <input type="button" id="btnSave" value="Save Image" style="visibility: hidden" data-dismiss="modal" onclick="SaveImage();" />
+
+                        </td>
+                    </tr>
+                </table>
+                <br />
+
+                <br />
+                <span id="camStatus"></span>
+            </form>
+        </div>
+    </div>
+</div>
